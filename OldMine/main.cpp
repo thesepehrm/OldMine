@@ -31,10 +31,10 @@ void init();
 void display();
 void setLight();
 void reshape(int,int);
-void keyboardDown(char,int,int);
-void keyboardUp(char,int,int);
-void keyboardSpecialUp(int,int,int);
-void keyboardSpecialDown(int,int,int);
+//void keyboardDown(char,int,int);
+//void keyboardUp(char,int,int);
+//void keyboardSpecialUp(int,int,int);
+//void keyboardSpecialDown(int,int,int);
 
 
 int main(int argc, char ** argv) {
@@ -57,8 +57,8 @@ void init()
     glutIdleFunc(display);
     glutReshapeFunc(reshape);
     
-    glutSpecialFunc(keyboardSpecialDown);
-    glutSpecialUpFunc(keyboardSpecialUp);
+    //glutSpecialFunc(keyboardSpecialDown);
+    //glutSpecialUpFunc(keyboardSpecialUp);
     
     //Depth Effect
     glEnable(GL_DEPTH_TEST);
@@ -69,13 +69,38 @@ void init()
     
     glEnable(GL_COLOR_MATERIAL);
     
-    glEnable(GL_LIGHTING);
-    glEnable (GL_LIGHT0);
-    setLight();
+    /*
+     glEnable(GL_LIGHTING);
+     glEnable (GL_LIGHT0);
+     setLight();
+     */
 }
 
-void setLight()
+
+
+void display()
 {
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, whiteDiffuseLight);
-    glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClearColor(1.0/255 * 3, 1.0/255 * 198, 1.0, 1.0); //Cyan
+    //setLight();
+    glLoadIdentity();
+    
+    glutSolidCube(1);
+    
+    
+    glutSwapBuffers();
+}
+
+void reshape(int width, int height)
+{
+    if (height == 0) {
+        height = 1;
+    }
+    float ratio = 1.0 * width / height;
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glViewport(0, 0, width, height); // clipping area
+    
+    gluPerspective(45, ratio, 1, 1000);
+    glMatrixMode(GL_MODELVIEW);
 }
