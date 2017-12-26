@@ -23,7 +23,23 @@ class FirstPersonPlayer
     // Player Features
     float jump_hight = 3; // Blocks
     float speed = 2; // Block per second
+    float life = 5; // Hearts
     
+    
+public:
+    FirstPersonPlayer();
+    
+    void setPos(Point);
+    void setEyeCenter(Point);
+    void setJumpHeight(float);
+    void setLife(float);
+    void setSpeed(float);
+    
+    Point getPos();
+    Point getEyeCenter();
+    float getJumpHeight();
+    float getLife();
+    float getSpeed();
     
     
 };
