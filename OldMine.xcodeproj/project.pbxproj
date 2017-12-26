@@ -29,6 +29,8 @@
 		FEA158B41FF23B830046F48B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FEA158BC1FF241630046F48B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		FEA158BD1FF241630046F48B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		FEA158C01FF2433B0046F48B /* FirstPersonPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstPersonPlayer.h; sourceTree = "<group>"; };
+		FEA158C11FF243660046F48B /* GameStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStructures.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				FEA158B41FF23B830046F48B /* main.cpp */,
+				FEA158C01FF2433B0046F48B /* FirstPersonPlayer.h */,
+				FEA158C11FF243660046F48B /* GameStructures.h */,
 			);
 			path = OldMine;
 			sourceTree = "<group>";

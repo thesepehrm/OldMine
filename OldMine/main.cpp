@@ -103,4 +103,6 @@ void reshape(int width, int height)
     
     gluPerspective(45, ratio, 1, 1000);
     glMatrixMode(GL_MODELVIEW);
+    WIDTH = width;
+    HEIGHT = height;
 }
