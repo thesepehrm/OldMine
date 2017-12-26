@@ -6,10 +6,18 @@
 //  Copyright © 2017 Mohammadi.io. All rights reserved.
 //
 
-#include <iostream>
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GLUT/gl.h>
+#endif
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include <iostream>
+#include <math.h>
+
+
+int main(int argc, char ** argv) {
+    
+    
     return 0;
 }

@@ -227,7 +227,7 @@
 		FEA158B91FF23B830046F48B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4DZ3GAW633;
+				DEVELOPMENT_TEAM = PVS9D8U3JB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -235,7 +235,7 @@
 		FEA158BA1FF23B830046F48B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4DZ3GAW633;
+				DEVELOPMENT_TEAM = PVS9D8U3JB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
