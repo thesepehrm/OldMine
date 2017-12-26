@@ -21,7 +21,7 @@ class FirstPersonPlayer
     RenderOptions options;
     
     // Player Features
-    float jump_hight = 3; // Blocks
+    float jump_height = 3; // Blocks
     float speed = 2; // Block per second
     float life = 5; // Hearts
     

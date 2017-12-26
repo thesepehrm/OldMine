@@ -17,7 +17,7 @@ struct Point {
 
 struct RenderOptions {
     int drawdistance = 10;
-    bool anti-aliasing = false;
+    bool anti_aliasing = false;
     int FOV = 45;
     
 };
