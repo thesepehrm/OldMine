@@ -16,8 +16,66 @@
 #include <math.h>
 
 
+/*
+ Defining the default width and HEIGHT of the window
+*/
+unsigned int WIDTH = 600;
+unsigned int HEIGHT = 600;
+
+/* Light0 Properties */
+GLfloat whiteDiffuseLight[] = {2.0, 2.0, 2.0};
+GLfloat lightPosition[] = { 0.0, 100.0 ,0.0, 0.3f };
+
+
+void init();
+void display();
+void setLight();
+void reshape(int,int);
+void keyboardDown(char,int,int);
+void keyboardUp(char,int,int);
+void keyboardSpecialUp(int,int,int);
+void keyboardSpecialDown(int,int,int);
+
+
 int main(int argc, char ** argv) {
+    glutInit(&argc, argv);
+    init();
     
-    
+    glutMainLoop();
     return 0;
+}
+
+void init()
+{
+    glutInitWindowSize(WIDTH, HEIGHT);
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
+    glutInitWindowPosition(int((glutGet(GLUT_SCREEN_WIDTH) / 2) - WIDTH / 2), int((glutGet(GLUT_SCREEN_HEIGHT) / 2) - HEIGHT / 2));
+    glutCreateWindow("Old Mine");
+    
+    //Register callbacks
+    glutDisplayFunc(display);
+    glutIdleFunc(display);
+    glutReshapeFunc(reshape);
+    
+    glutSpecialFunc(keyboardSpecialDown);
+    glutSpecialUpFunc(keyboardSpecialUp);
+    
+    //Depth Effect
+    glEnable(GL_DEPTH_TEST);
+    
+    //Alpha
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
+    glEnable(GL_COLOR_MATERIAL);
+    
+    glEnable(GL_LIGHTING);
+    glEnable (GL_LIGHT0);
+    setLight();
+}
+
+void setLight()
+{
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, whiteDiffuseLight);
+    glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
 }
