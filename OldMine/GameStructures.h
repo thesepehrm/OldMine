@@ -10,9 +10,9 @@
 #define GameStructures_h
 
 struct Point {
-    int x,
-    int y,
-    int z
+    int x;
+    int y;
+    int z;
 };
 
 

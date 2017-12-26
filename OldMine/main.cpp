@@ -12,6 +12,9 @@
 #include <GLUT/gl.h>
 #endif
 
+#include "GameStructures.h"
+#include "FirstPersonPlayer.h"
+
 #include <iostream>
 #include <math.h>
 

@@ -14,7 +14,7 @@
 class FirstPersonPlayer
 {
     Point position;
-}
+};
 
 
 #endif /* FirstPersonPlayer_h */
