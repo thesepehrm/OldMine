@@ -1,2 +1,2 @@
 # OldMine
-It's my attempt to make a minecraft-like game.
+My attempt to make a minecraft-like game.
