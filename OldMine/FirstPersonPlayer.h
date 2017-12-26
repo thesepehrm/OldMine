@@ -13,7 +13,19 @@
 
 class FirstPersonPlayer
 {
+    // Camera Features
     Point position;
+    Point center_eye;
+    
+    // Render Features
+    RenderOptions options;
+    
+    // Player Features
+    float jump_hight = 3; // Blocks
+    float speed = 2; // Block per second
+    
+    
+    
 };
 
 

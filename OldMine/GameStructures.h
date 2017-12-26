@@ -15,5 +15,12 @@ struct Point {
     int z;
 };
 
+struct RenderOptions {
+    int drawdistance = 10;
+    bool anti-aliasing = false;
+    int FOV = 45;
+    
+};
+
 
 #endif /* GameStructures_h */
