@@ -11,6 +11,7 @@
 		FEA158BE1FF241670046F48B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA158BD1FF241630046F48B /* OpenGL.framework */; };
 		FEA158BF1FF2416B0046F48B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA158BC1FF241630046F48B /* GLUT.framework */; };
 		FEA158C31FF248800046F48B /* FirstPersonPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA158C21FF248800046F48B /* FirstPersonPlayer.cpp */; };
+		FEA158C81FF2507B0046F48B /* Terrain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA158C71FF2507B0046F48B /* Terrain.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,8 @@
 		FEA158C01FF2433B0046F48B /* FirstPersonPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstPersonPlayer.h; sourceTree = "<group>"; };
 		FEA158C11FF243660046F48B /* GameStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStructures.h; sourceTree = "<group>"; };
 		FEA158C21FF248800046F48B /* FirstPersonPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FirstPersonPlayer.cpp; sourceTree = "<group>"; };
+		FEA158C41FF24F0E0046F48B /* Terrain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Terrain.h; sourceTree = "<group>"; };
+		FEA158C71FF2507B0046F48B /* Terrain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Terrain.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				FEA158C01FF2433B0046F48B /* FirstPersonPlayer.h */,
 				FEA158C11FF243660046F48B /* GameStructures.h */,
 				FEA158C21FF248800046F48B /* FirstPersonPlayer.cpp */,
+				FEA158C41FF24F0E0046F48B /* Terrain.h */,
+				FEA158C71FF2507B0046F48B /* Terrain.cpp */,
 			);
 			path = OldMine;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			files = (
 				FEA158C31FF248800046F48B /* FirstPersonPlayer.cpp in Sources */,
 				FEA158B51FF23B830046F48B /* main.cpp in Sources */,
+				FEA158C81FF2507B0046F48B /* Terrain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
