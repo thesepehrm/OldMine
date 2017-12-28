@@ -13,6 +13,7 @@
 
 class FirstPersonPlayer
 {
+    friend class Terrain;
     // Camera Features
     Point position;
     Point center_eye;

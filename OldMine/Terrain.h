@@ -9,14 +9,25 @@
 #ifndef Terrain_h
 #define Terrain_h
 #include <iostream>
+#include <vector>
+#include "GameStructures.h"
 
 class Terrain {
+
     int seed;
-    int voxel_size = 5;
+    int chunk_size = 5;
+    int height = 30; //blocks
+    
+    vector<Chunk> map;
+    
+    Pillar* generatePillar(float,float);
+    Chunk* generateChunk();
     
 public:
     Terrain();
     Terrain(int);
+    
+    void generateTerrain();
     
     
 };
