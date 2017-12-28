@@ -19,12 +19,13 @@ class Terrain {
     int update_size = 5;
     int height = 30; //blocks
     
-    vector<Chunk> map;
+    
     
     Pillar* generatePillar(float,float);
     Chunk* generateChunk(float,float);
     
 public:
+    vector<Chunk> map;
     Terrain();
     Terrain(int);
     

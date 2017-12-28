@@ -14,6 +14,7 @@
 
 #include "GameStructures.h"
 #include "FirstPersonPlayer.h"
+#include "Terrain.h"
 
 #include <iostream>
 #include <math.h>
@@ -31,6 +32,7 @@ GLfloat lightPosition[] = { 0.0, 100.0 ,0.0, 0.3f };
 
 
 void init();
+void initGame();
 void display();
 void setLight();
 void reshape(int,int);
@@ -39,10 +41,14 @@ void reshape(int,int);
 //void keyboardSpecialUp(int,int,int);
 //void keyboardSpecialDown(int,int,int);
 
+Terrain gameterrain;
+FirstPersonPlayer player;
+
 
 int main(int argc, char ** argv) {
     glutInit(&argc, argv);
     init();
+    initGame();
     
     glutMainLoop();
     return 0;
@@ -79,6 +85,13 @@ void init()
      */
 }
 
+void initGame()
+{
+    gameterrain = Terrain();
+    player = FirstPersonPlayer();
+    
+    gameterrain.generateTerrain();
+}
 
 
 void display()
@@ -88,8 +101,16 @@ void display()
     //setLight();
     glLoadIdentity();
     
-    glutSolidCube(1);
-    
+    for (auto &chunk : gameterrain.map)
+        for (auto &pillar : chunk.pillars)
+            for (auto &block : pillar.blocks)
+            {
+                glPushMatrix();
+                glColor3ub(block.color.red, block.color.green, block.color.blue);
+                glTranslatef(block.center.x,block.center.y, block.center.z);
+                glutSolidCube(1);
+                glPopMatrix();
+            }
     
     glutSwapBuffers();
 }
