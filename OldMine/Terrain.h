@@ -16,12 +16,13 @@ class Terrain {
 
     int seed;
     int chunk_size = 5;
+    int update_size = 5;
     int height = 30; //blocks
     
     vector<Chunk> map;
     
     Pillar* generatePillar(float,float);
-    Chunk* generateChunk();
+    Chunk* generateChunk(float,float);
     
 public:
     Terrain();

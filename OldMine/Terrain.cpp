@@ -35,11 +35,17 @@ Pillar* Terrain::generatePillar(float x, float z)
         pl->blocks.push_back({{x,y,z},{150,150,150}});
     return pl;
 }
-Chunk* Terrain::generateChunk()
+Chunk* Terrain::generateChunk(float lx, float lz)
 {
-    
+    Chunk *ch = new Chunk();
+    for (float x=0; x< chunk_size; x++)
+        for (float z=0;z<chunk_size;z++)
+            ch->pillars.push_back(*generatePillar(lx + x, lz + z));
+    return ch;
 }
 void Terrain::generateTerrain()
 {
-    
+    for (float x=0;x<update_size;x++)
+        for (float z=0; z<update_size; z++)
+            map.push_back(*generateChunk(x * chunk_size, z * chunk_size));
 }
